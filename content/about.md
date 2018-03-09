@@ -30,8 +30,10 @@ experiences, from others, and from everything around us. Our ability to expand o
 
 I work on products by day, hack on deep learning projects by night, and learn continously.
 
-A lot of my work and interests are inter-disciplinary. MS
-ome areas of my work:
+A lot of my work and interests are inter-disciplinary. 
+
+Some areas of my work are:
+
 
 - Product Management: product + portfolio strategy, product concept to launch, planning/forecasting, [customer] value proposition development, roadmapping, go-to-market strategy
 - Leadership: leading cross-functional teams: product, engineering, design, marketing
@@ -46,5 +48,4 @@ Primary industries:
 - Autonomous Systems (Self-Driving Cars, etc.)
 - Telecom / Networking: Infrastructure: Optical networking, switching
 
-M
-ore to come...
+More to come...
