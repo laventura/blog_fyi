@@ -1,0 +1,61 @@
+---
+title: Self Driving Cars and Automation
+author: Atul Acharya
+date: '2016-12-01'
+slug: self-driving-cars-and-automation
+categories:
+  - Self Driving Car
+  - Autonomous Systems
+tags:
+  - Self Driving Car
+  - Autonomous Systems
+  - Deep Learning
+  - Computer Vision
+---
+
+When we talk about Self-Driving Cars (SDC) or Autonomous Vehicles (AV), what exactly do we mean?
+
+At a high level, this question seems kind of self explanatory: _a self-driving car is one that drives itself, autonomously_. But what does _autonomy_ imply? What systems or sub-systems of the vehicle are autonomous? Can it, for example, _see_ what is around? Pedestrians, other vehicles, obstacles, road signs? Can it maneuver itself around bends and turns and traffic lights, is that autonomy? Can it brake safely? Does that count? What is _"safe"_ mean?
+
+To answer exactly these questions, there's a framework from [SAE International] (https://saemobilus.sae.org/content/j3016_201401) that defines distinctive levels of autonomy and what these imply.
+
+## Levels of Autonomy 
+
+![SAE Levels of Autonomy](/sdc/sae-autonomy.png){width=80%}
+
+* **Level 0: No Automation** 
+Nothing is automated. All controls are human (driver) controlled: steering, braking, throttle (gas pedal), etc.
+
+* **Level 1: Driver Assistance** 
+Most functions are driver controlled, but some specific functions (e.g. steering, braking) are automated. Example:  anti-lock brakes.
+
+* **Level 2: Partial Automation** 
+At least one driver assistance system of "both steering and acceleration/ deceleration using information about the driving environment" is automated. Example: adaptive cruise control, or lane centering. The driver is still in control, and must be ready to take over the vehicle at any time. 
+
+* **Level 3: Conditional Automation**
+Drivers are required in the vehicle, but are able to completely shift safety critical functions to the vehicle, _under certain conditions_. The driver is still required, but is not required to monitor the environment continuously. The driver *may* be required to take over at any time though. 
+
+* **Level 4: High Automation**
+This is colloquially referred to as the "self-driving" mode. The vehicle can drive autonomously and perform safety critical functions and monitor driving conditions. However, it does _not_ mean _under all circumstances_, e.g. driving under snowy or stormy conditions, etc. In these situations, a human driver is required.
+
+* **Level 5: Full Automation**
+This means _all_ functions are performed by the vehicle, _under all driving conditions_, including driving under extreme conditions. This is considered the holy grail of autonomy.
+
+So, where are we today? There's a lot of progress being made by various companies, but my estimate is we are somewhere near Level 3, and getting closer to Level 4 (in the next 5 years or so).
+
+***
+
+The above framework is good for policy discussions, such as for regulating SDC/AVs on the road, performing tests both real-world or otherwise, comparing vehicular capabilities, and perhaps for marketing purposes. However, this framework is not particularly useful from an engineering design perspective.
+
+[Lex Fridman at MIT](https://selfdrivingcars.mit.edu/) introduces a different perspective. He proposes the following framework for autonomy:
+
+**Human-centered Autonomy** In this, the AI (automated functions) is not fully responsible, across features/functions such as _"availability"_ (when/where is automation available), e.g. highway driving, traffic, sensor-based control, how many seconds available for human-intervention (1 second, 10 seconds, etc) 
+
+**Full Autonomy** In this, AI is fully responsible, and no human intervention is necessary, there is no tele-operation (human remote control), there's no 10-second take over rule (AI can ask human to take over, but not guaranteed to receive it), and humans can _choose to take over_.
+
+![Human Autonomy vs Full AI](/sdc/sdc-lex-autonomy.png){width=80%}
+
+(credit: Lex Fridman, MIT)
+
+
+
