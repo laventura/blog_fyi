@@ -3,6 +3,7 @@ title: How Self-Driving Cars Work
 author: Atul Acharya
 date: '2017-01-03'
 slug: how-self-driving-cars-work
+description: A short primer on architecture of self-driving cars (autonomous vehicles)
 categories:
   - Self Driving Car
 tags:
@@ -28,6 +29,9 @@ The sensor subsystem consists of various hardware sensors that gather data about
 <img src="/sdc/sdc-sensors.png" height=300 width=400 />
 
 (pic credit: Lex Fridman)
+
+[Waymo's cars](https://waymo.com/safetyreport/) show its sensors and where they are mounted.
+<img src="/sdc/waymo-sensors.png" height=400 width=600 />
 
 ### Camera
 
@@ -70,6 +74,10 @@ Broadly speaking, perception can be divided into two key components: **localizat
 
 **Detection** This system uses data from camera, lidar, radar and other sensors for key functionality such as _lane detection_, _vehicle detection_, _traffic light detection and classification_, _obstacle detection_, _object detection and tracking_, _free space detection_, and more.
 
+As a practical example, [Waymo's Safety Report](https://waymo.com/safetyreport/) shows how sensor fusion and perception allow it to ask two critical questions: **Where Am I?** and **What's Around Me?**
+
+<img src="/sdc/waymo-perception.png" height=300 width=400 />
+
 
 # Planning 
 
@@ -92,6 +100,10 @@ The behavior planner takes information from components like lane detector, traff
 The trajectory planner takes the behavior planner's immediate planned behavior, and generates multiple (dozens or hundreds) trajectories, all the while while keeping track of user comfort (e.g. smooth acceleration/decelration, no sudden jerky movements), road rules (e.g. speed limits, etc.), vehicle dynamics (e.g. body weight, load, etc.), and determines the exact trajectory to take. This trajectory is passed on to the control subsystem to execute as a set of commands.
 
 The trajectory planner takes information from lane detector, object detector/tracker, free space detector, behavior planner, and feeds information back to behavior planner as well.
+
+Continuing Waymo's example, we see how Prediction and Planning components help Waymo answer the two following questions: **What Will Happen Next?** and **What Should I Do?**
+
+<img src="/sdc/waymo-planning.png" height=300 width=400 />
 
 # Control
 
