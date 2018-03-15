@@ -25,9 +25,9 @@ footnotereturnlinkcontents = "↩"
 
 
 [params]
-    description = "Atul Acharya"
+    description = "Atul Acharya on Artificial Intelligence, Deep Learning, Self Driving Cars, Product, Strategy and more."
     # footer link 
-    footer = "(c) 2000 - Present [Atul Acharya](https://atul.fyi) "
+    footer = "(c) 2005 - Present [Atul Acharya](https://atul.fyi) "
 
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.11.0"
