@@ -76,7 +76,7 @@ Broadly speaking, perception can be divided into two key components: **localizat
 
 As a practical example, [Waymo's Safety Report](https://waymo.com/safetyreport/) shows how sensor fusion and perception allow it to ask two critical questions: **Where Am I?** and **What's Around Me?**
 
-<img src="/sdc/waymo-perception.png" height=300 width=400 />
+<img src="/sdc/waymo-perception.png" height=400 width=600 />
 
 
 # Planning 
@@ -103,7 +103,7 @@ The trajectory planner takes information from lane detector, object detector/tra
 
 Continuing Waymo's example, we see how Prediction and Planning components help Waymo answer the two following questions: **What Will Happen Next?** and **What Should I Do?**
 
-<img src="/sdc/waymo-planning.png" height=300 width=400 />
+<img src="/sdc/waymo-planning.png" height=400 width=600 />
 
 # Control
 
