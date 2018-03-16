@@ -1,7 +1,6 @@
 ---
 title: "About"
 date: "2015-01-01T21:48:51-07:00"
-keywords: Atul Acharya, product, product management, product strategy, deep learning, AI, machine learning, self-driving car, robotics
 ---
 
 Hi there. 👋
@@ -15,7 +14,22 @@ You may, or may not, find here what you came looking for. (But I'll be happy if 
 
 One word that describes me: _Curious_. Two more: _Lifelong learner_. If you know me, I'm always on a quest to do or learn something new.
 
-### Things I'm Learning and Building (a constantly updated list)
+My view of AI is that _artificial intelligence is an augmentation tool for humans._ As such, I am completely fascinated by **applied AI, deep learning**. I like and understand the theories; however, I am more enamored by _practical use cases of deep learning_.
+
+I keep a broad interest in applied AI, and here are a few interesting uses cases I track.
+
+#### Applied AI Use Cases
+
+* **Healthcare:** Medical diagnostics (radiology, skin cancer detection, diabetic retinopathy, etc.)
+* **Robotics:** Self driving cars, Autonomous robots, Flying cars
+* **AI on the Edge** Deep learning applications on smartphones, Raspberry Pi, and other limited-compute devices
+* **Aerial:** Aerial image (satellite image analytics), drone photography/analytics
+* **Creative AI:** creative arts (e.g. neural style transfer), creative music generation tools for artists and amateurs 
+* **Natural Language Understanding:** Neural machine translation, language understanding
+
+
+## Things I'm Learning and Building (a constantly updated list)
+
 
 - **Deep Learning** -  I completed several specializations: [Deep Learning (Andrew Ng's new 5-course)](https://www.coursera.org/account/accomplishments/specialization/certificate/AQEGV5ZLBS2P), [Machine Learning Specialization (from Univ. of Washington)](https://www.coursera.org/account/accomplishments/specialization/certificate/8ABRKKSSM4AP), [Artificial Intelligence Nanodegree](https://confirm.udacity.com/5GN6ARGK) from Udacity, and some more. See [here for my reviews](http://atul.fyi/post/2016/03/01/on-learning-deep-learning/).
 
@@ -29,8 +43,7 @@ One word that describes me: _Curious_. Two more: _Lifelong learner_. If you know
 My (very brief) view of humanity is that what separates us from other animals is _our ability to learn_ - from our
 experiences, from others, and from everything around us. Our ability to expand our potential, and to apply it to daily life. That's what drives me.
 
-### Work 
-
+## Work 
 I work on products by day, hack on deep learning projects by night, and learn continously.
 
 A lot of my work and interests are inter-disciplinary. As such, my interests span the **big picture** -- strategy, vision, product, growth, customers -- and the **details** -- product management, design, analytics, UX. I switch between the two easily, as do I between _technology_ and _business_.

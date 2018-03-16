@@ -13,7 +13,22 @@ tags:
 
 I'm often asked about how to go learning about machine learning, deep learning and artificial intelligence (AI). This post is a (constantly updated) list of resources that _I_ have found useful. Your mileage _will vary_ by your own experience, background, motivation and expertise. I do hope you will find this useful though.
 
-I use a combination of books and online learning (_no pun_) and offline meetups to go deep. Here are some of my favorite resources.
+---
+### My Interests
+
+When I first dipped my toes in machine learning (early 2000s) as a technical architect, the sector was small, and full of technical mumbo-jumbo; the "experts" loved to keep it that way. It turned me off, and I pursued other areas.
+
+Later in 2010-2012, I renewed my interest and found _machine learning_ somewhat changed, updated, and scrubbed. As my own work focused more on analytics, I enjoyed understanding _natural language processing_, _recommendation systems_, and their practical applications. However, large scale use cases were few and far between among the technology leaders and academic labs.
+
+In the modern era (c. 2014 onwards), as academic researchers lead one breakthrough after another in _deep learning_, and tech leaders brought these latest ideas to market, there has been a renaissance in both research and applications of machine learning, deep learning, and AI.
+
+My view of AI is that _artificial intelligence is an augmentation tool for humans._ As such, I am completely fascinated by **applied AI, deep learning**. I like and understand the theories; however, I am more enamored by _practical use cases of deep learning_.
+
+---
+
+### Approach
+
+I use a combination of projects, books, online learning, and offline events and workshops to go deep (_no pun_). Here are some of my favorite resources.
 
 # Books
 
