@@ -1,14 +1,14 @@
 ---
-title: How Self-Driving Cars Work
+title: How Self-Driving Cars Work - Architecture Overview
 author: Atul Acharya
 date: '2017-01-03'
-slug: how-self-driving-cars-work
-description: A short primer on architecture of self-driving cars (autonomous vehicles)
 categories:
   - Self Driving Car
 tags:
-  - Self Driving Car
   - Autonomous Systems
+  - Self Driving Car
+slug: how-self-driving-cars-work
+description: A short primer on architecture of self-driving cars (autonomous vehicles)
 ---
 
 In this post, we will look at the architecture of Self-Driving Cars (SDC) -- or Autonomous Vehicles (AV), as they are alternatively called -- and the various sub-systems that make it work. 
