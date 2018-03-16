@@ -33,11 +33,13 @@ In order to achieve a safe and smooth autonomous driving experience, the ego car
 
 ## Summary
 
-My self-driving car successfully completed the [Bosch Path Planning challenge](https://www.udacity.com/bosch-challenge), and was one of the top 25 entries, from among hundreds of entries. 👍🚗🍾
+My self-driving car successfully completed the [Bosch Path Planning challenge](https://www.udacity.com/bosch-challenge), and was one of the top 25 entries, from among hundreds of entries. 👍🚗🍾 Niiice
+
+Check out the video below (click on the image). Best way is to watch it at 2x speed.
 
 [<img src="/sdc/pp-bosch2.png" width=600 height=400 />](https://www.youtube.com/watch?v=oVQDk5aBwvI&feature=youtu.be)
 
-Here's the [Youtube video](https://www.youtube.com/watch?v=oVQDk5aBwvI&feature=youtu.be). Best way is to watch it at 2x speed.
+Here's the [Youtube video](https://www.youtube.com/watch?v=oVQDk5aBwvI&feature=youtu.be). 
 
 ## What is Path Planning
 
@@ -415,3 +417,7 @@ Fourth, one could project the future behavior of traffic and try to predict thei
 ### Code
 
 Code for this project is [on my repo](https://github.com/laventura/bosch_path_planning)
+
+### Acknowledgments 
+
+Many thanks to David Silver and Aaron Brown at Udacity for clearing up many of the concepts. 🙏🏻

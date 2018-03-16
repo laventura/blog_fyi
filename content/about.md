@@ -8,7 +8,10 @@ Hi there. 👋
 My name is Atul Acharya; I'm a maker and builder of things, and I love learning.
 
 This site exists primarily to document my own learning adventures over the years.
-You may, or may not, find here what you came looking for. (But I'll be happy if you did.)
+
+### Contact
+
+Feel free to contact me on Twitter: @AtulAcharya
 
 ## About Me
 
