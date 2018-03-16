@@ -33,7 +33,9 @@ The traning consists of getting the (simulated) car to recognize road images, an
 The simulated car drives autonomously on Track 1. See video here:
 
 
-[![Behavior Cloning - simulator](/sdc/p3-yt-video.png)](https://www.youtube.com/watch?v=vv8ZTT8IhvA)
+[YouTube video](https://www.youtube.com/watch?v=vv8ZTT8IhvA)
+
+[<img src="/sdc/p3-yt-video.png" width=600 />](https://www.youtube.com/watch?v=vv8ZTT8IhvA)
 
 --- 
 
@@ -192,7 +194,9 @@ On Track1 the model runs well. The simulated driving closely mimics the training
 
 **Recovery** The car recovers well when it is swerving; this is because of recovery data (moving from close to right/left barries to the center of the lane). 
 
-[![Behavior Cloning - simulator](yt_video_img.png)](https://www.youtube.com/watch?v=vv8ZTT8IhvA)
+[YouTube link](https://www.youtube.com/watch?v=vv8ZTT8IhvA)
+
+[<img src="/sdc/p3-yt-video.png"  width=600 />](https://www.youtube.com/watch?v=vv8ZTT8IhvA)
 
 #### Reflections
 
