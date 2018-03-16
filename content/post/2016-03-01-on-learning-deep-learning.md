@@ -123,7 +123,8 @@ Recommended to any beginner.
 
 *5.* [_Practical Deep Learning for Coders_](http://www.fast.ai/) [Review: ★★★★✯]
 
-Developed by Jeremy Howard and Rachel Thomas, this really is a set of two courses - one (Part 1) more basic, other (Part 2) more advanced. 
+Developed by [Jeremy Howard and Rachel Thomas](http://www.fast.ai/about/), this really is a set of two courses - one (Part 1) more basic, other (Part 2) more advanced. 
+
 
 What differentiates them from all others is their focus on developers, and their style of teaching. As they've [written elsewhere] (http://www.fast.ai/2016/10/08/overview/), Jeremy and Rachel teach you how to drive a car without first teaching you the basics of internal combustion engine. This style works best for hands-on coders, developers, and hackers who want to get dirty with the code without (necessarily) understanding the _whys_ of the underlying library. Jeremy and Rachel developed their own library/framework (fast.ai) that sits on top of [PyTorch] (http://pytorch.org/) (the other up-and-coming framework for deep learning). They show you _how_ to use the fast.ai library, and implement deep learning first, without diving too deep into the mechanics of mathematics, calculus, linear algebra and such. This can be both great (if you're impatient), and not-so-great (if you're curious about the mechanics of algorithms and the explanations).
 
