@@ -1,6 +1,7 @@
 ---
 title: "About"
 date: "2015-01-01T21:48:51-07:00"
+keywords: Atul Acharya, product, product management, product strategy, deep learning, AI, machine learning, self-driving car, robotics
 ---
 
 Hi there. 👋
