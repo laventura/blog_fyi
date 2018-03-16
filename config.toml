@@ -44,3 +44,10 @@ footnotereturnlinkcontents = "↩"
     height = 50
     alt = "Logo"
 
+
+  [sitemap]
+    # added by Atul
+    changefreq = "weekly"
+    priority = 0.5
+    filename = "sitemap.xml"
+
