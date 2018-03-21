@@ -1,0 +1,14 @@
+---
+title: On the First Self-Driving Car Fatality
+author: Atul Acharya
+date: '2018-03-21'
+slug: first-self-driving-car-fatality
+categories:
+  - Autonomous Systems
+  - Self Driving Car
+tags:
+  - Autonomous Systems
+  - Self Driving Car
+  - regulations
+---
+
