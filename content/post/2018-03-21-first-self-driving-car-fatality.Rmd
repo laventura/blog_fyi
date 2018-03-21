@@ -12,3 +12,111 @@ tags:
   - regulations
 ---
 
+On the First Self-Driving Car Fatality
+By now, many of you may have heard about the sad situation of a  self-driving car, operated by Uber in Tempe, AZ with a backup safety driver, and its collision with a pedestrian that resulted in her death. 
+
+As a learner of all things (especially self driving cars and robotics), I am extremely interested in this story.  I’m not interested in apportioning blame here; I’m merely interested in how the technology may (or may not) have failed, and what we can learn from this. What follows are my thoughts (and some speculation) on how the collision might have occurred, and what investigations should happen next. 
+
+*But first, a disclaimer: These are my opinions only, and they will necessarily evolve as we learn more about the incident;  I do not represent any organization involved.  I am not (yet) a self-driving car expert, although I sometimes play one on the internet.  I am definitely not a lawyer, and I wouldn’t want to play one anywhere. I am merely a very concerned citizen, and my opinions will evolve based on facts as they emerge.*
+
+As sad as the outcome of the accident is, in this case the death of Elaine Herzberg, it is worth finding out more about *exactly how* it happened so that future accidents may be prevented. More so, because the whole premise of existence of self-driving cars is that they are meant to be /safer/ than human drivers. 
+
+The [facts so far are](https://www.reuters.com/article/us-autos-selfdriving-uber/self-driving-uber-car-kills-arizona-woman-crossing-street-idUSKBN1GV296):
+
+> Elaine Herzberg, 49, was walking her bicycle outside the crosswalk on a four-lane road in the Phoenix suburb of Tempe about 10 p.m. MST Sunday (0400 GMT Monday) when she was struck by the Uber vehicle traveling at about 40 miles per hour (65 km per hour), police said. The Volvo XC90 SUV was in autonomous mode with an operator behind the wheel.
+
+
+## Background and Traffic Statistics
+The statistics on car accidents are well known and rather grim. Every year, in the United States alone, over 37,000 traffic fatalities occur in over 34,000 crashes. 
+
+The chart below shows the nature of fatalities in 2016. 
+
+[image:5904C0A1-E214-44C9-9762-5B101E1FF1A1-383-0000C69C985965F2/Traffic Stats.png]
+
+In 2016 alone, almost 6000 pedestrians died in crashes; this relates to about 6000 people injured per day (of which ~180 are pedestrians/day). Overall, approximately 70,000 pedestrians are injured every year due to traffic accidents. 
+
+[image:848C2CFE-1D56-42A2-8E91-8900CA51B576-383-0000C6A3E636E5B6/traffic-ped-stat1.png]
+
+
+Traffic safety is measured in “fatalities per vehicle miles traveled (VMT)”, or more accurately in fatalities per 100 million VMT.  In 2016, this fatality rate per 100 million VMT was 1.18, up slightly from 1.15 in 2015. The rate has been more or less stable (+/- ~2 %-points) since 2009. In all, Americans drove 3.2 trillion miles in 2016, while encountering approximately 37,000 fatalities.  The injury rate per 100 VMT is about far higher at about 79 (2015, when last data was available). 
+
+[image:D132FE81-E008-4FEC-AAD9-ED305FD8146E-383-0000C6A65DDE493A/traffic-fatality.png]
+
+
+[National Safety Council](http://www.nsc.org/NewsDocuments/2017/12-month-estimates.pdf) (different from NHTSA) estimates about 40,000 fatalities in 2016, and estimates costs of approximately $433 billion (2016) due to vehicular death, injuries, property damages and lost productivity.
+
+How does this data compare to other modes of transport? In the US, airline fatalities are in the low 400s / year, and rail and 
+
+In contrast, autonomous vehicles in all had driven much, much less. The number is more like [4 million miles for Waymo](https://medium.com/waymo/waymos-fleet-reaches-4-million-self-driven-miles-b28f32de495a), about [2 million miles for Uber.](https://thelastdriverlicenseholder.com/2017/12/28/uber-milestone-2-million-autonomous-miles-driven/) Even counting all the autonomous vehicles on the road today, we couldn’t add up to 100 million miles. 
+
+All this to imply that while fatalities in aggregate are high, injuries are even higher, even though human drivers are generally safe drivers.  Humans are still far better at avoiding fatal accidents, though there is plenty of room to improve in all aspects, particularly in driver-related crashes.
+
+For autonomous vehicles, we simply do not have enough data to make a conclusion yet. 
+
+The silver lining for autonomous systems is that they can be trained to avoid these situations, and they can learn from their own experience. 
+
+## How could this collision have happened?
+The Uber autonomous car was likely driving in a “fully autonomous”  or “conditional fully autonomous” model (Level 3 or Level 4 autonomy) , although the backup safety driver was present for just these kinds of emergency situations.
+
+Without the benefit of actual crash data from the Uber vehicle and any actual footage, it is extremely hard to guess accurately how collision might have occurred.  However, one might speculate on three possibilities.
+
+### Sensor failure?
+
+
+Based on the evidence above (and nothing else so far), it is highly unlikely that the sensors failed in this situation.
+
+### Prediction failure?
+
+The prediction subsystem in an autonomous vehicle is responsible for three critical functions:
+* Predicting the behavior of other cars, pedestrians, etc. on the road
+* Planning the autonomous vehicle’s own behavior 
+* Planning its own trajectory 
+
+All of these functions are use complex mathematical models.  Predicting the behavior of other dynamic objects on the road first starts with sensing their precise location (obtained from sensor fusion data above), and using a hybrid of process- and data-models to predict where each object will move.  These models use highly sophisticated techniques like probabilistic and optimization models that predict where a dynamic object (e.g. pedestrian, a car, or an errant animal darting across the road) will be in the next instant, and update their prediction based on actual sensor data. This predict-update cycle occurs hundreds or thousands of times per second, and can accurately predict a smooth trajectory for moving objects. [For the technically minded, these techniques are a combination of Kalman filters, expectation-maximization, probabilistic models, and can also be learned from data.]
+
+People crossing a road, in most cases, do not randomly walk. In the face of traffic, they either speed up to get to the other side, or they pause or stop briefly to confront incoming vehicles expecting them to slow down or stop, or  or they backtrack to safety  and let incoming traffic pass.  However, one could speculate a pedestrian, unaware and randomly walking onto the road. In this case, it _is_ hard to predict their move, especially if it is completely random. And for an autonomous system to predict such a move would be a tall order. However, if the vehicle had sufficient time, it would normally slow down, or even brake suddenly.
+
+Did the prediction function fail in this case? It is hard to say conclusively. However, it appears that since the pedestrian “suddenly appeared on the road, with her bike full of shopping bags”, the prediction system apparently did not, or could not, accurately predict her next move. And this is possibly likely especially if she was crossing the high traffic road not at an intersection. 
+
+Now, most autonomous vehicles are likely trained for some semblance of situations like these: small animals darting across the road, people jaywalking, etc. However, in the unlikely event that 
+
+### Takeover time was too short?
+In all likelihood, the time for takeover by backup safety was too short in this case. The takeover time is the delay between the instant the autonomous system gives up control of the car by signaling to the backup driver, and the time the driver actually takes control. 
+
+What does research say about ideal takeover time? A [study by University of Southampton](https://www.sciencedaily.com/releases/2017/01/170126081625.htm) notes that drivers need anywhere from [~2 seconds to 25 seconds for transition](https://phys.org/news/2017-01-guidelines-takeover-automated-vehicles.html), depending on the task they were doing before taking control. In particular:
+
+> a too-short lead time (e.g., 7 seconds prior to taking control, as found in some studies of critical response time) could prevent drivers from responding optimally, resulting in a stressed transition process whereby drivers may accidentally swerve, making sudden lane changes or braking harshly. Such actions are acceptable in safety-critical scenarios when drivers may have to avoid a crash but could pose a safety hazard for other road users in noncritical situations.
+
+Given that the Uber autonomous car was driving at around 40 miles / hour in the 35 mph zone on a busy road, a pedestrian who “came from shadows right into the roadway” in front of the vehicle could very likely lead to an extremely short takeover time. 
+
+Indeed, as the [preliminary investigation says](https://www.sfchronicle.com/business/article/Exclusive-Tempe-police-chief-says-early-probe-12765481.php), Uber is likely not at fault in this case. It would have been difficult even for a human driver to void the collision.
+
+> From viewing the videos, “it’s very clear it would have been difficult to avoid this collision in any kind of mode (autonomous or human-driven) based on how she came from the shadows right into the roadway,” Moir said.
+
+
+## What Next?
+So it’s the pedestrian’s fault, and no blame to the backup driver or the company?
+
+Well, that is not so simple. We are still in the human-controlled autonomy era and until we have full confidence in our autonomous systems, regardless of who is at fault, the blame will be placed on autonomous vehicles? Why, simply because we, as humans, demand a simple cause-and-effect, more so in stressful situations like this one.
+
+What should happen next?
+
+I believe three things should be followed up:
+
+- Airline style investigation. This case deserves a full airline crash style investigation, wherein the crash data from the black box (all the sensors in the AV) is reviewed thoroughly to establish the conditions that led to the crash.
+- Sharing of crash data  with other AV makers. More importantly, I think all such crash data, especially that involves collisions with humans, should be shared in the automotive industry. Uber should definitely share it with its own partners; however, the NHTSA should also make the data available to other AV manufacturers so that they can train their autonomous vehicles in these crash situations. After all, if autonomous vehicles learn from each other, this makes perfect sense, and all car OEMs, and other AV stakeholders should demand sharing of this data willingly. How likely will this be? That is anybody’s guess.
+- Legality of at-fault. The most vexing question is: who is liable? This requires a full policy discussion, and there are various debates already underway.  I am not a lawyer, but as a citizen I would like to see clear cut criteria and policies on the liabilities, and wherever ambiguities lie, exactly how to resolve them.
+
+This is not the last word on this incident. Stay tuned for more.
+
+### References
+1. https://www.reuters.com/article/us-autos-selfdriving-uber/self-driving-uber-car-kills-arizona-woman-crossing-street-idUSKBN1GV296
+2. https://www.sfchronicle.com/business/article/Exclusive-Tempe-police-chief-says-early-probe-12765481.php
+3. [U.S. Traffic Deaths Rise for a Second Straight Year - The New York Times](https://www.nytimes.com/2017/02/15/business/highway-traffic-safety.html)
+4. National Safety Council Fatality Estimates: http://www.nsc.org/NewsDocuments/2017/12-month-estimates.pdf
+5. TechCrunch: [Here’s how Uber’s self-driving cars are supposed to detect pedestrians – TechCrunch](https://techcrunch.com/2018/03/19/heres-how-ubers-self-driving-cars-are-supposed-to-detect-pedestrians/?utm_source=tctwreshare&utm_medium=feed&utm_campaign=Feed%3A+Techcrunch+%28TechCrunch%29&sr_share=twitter)
+6. [The Uber fatality shows we don’t know if driverless cars are safer - The Washington Post](https://www.washingtonpost.com/opinions/no-driverless-cars-arent-far-safer-than-human-drivers/2018/03/20/5dc77f42-2ba9-11e8-8ad6-fbc50284fce8_story.html?utm_term=.59751b67e51b)
+7. NHTSA, 2016 Fatal Traffic Crash Data, [USDOT Releases 2016 Fatal Traffic Crash Data | NHTSA](https://www.nhtsa.gov/press-releases/usdot-releases-2016-fatal-traffic-crash-data)
+8. NYTimes, [Where Self-Driving Cars Go to Learn - The New York Times](https://www.nytimes.com/2017/11/11/technology/arizona-tech-industry-favorite-self-driving-hub.html)
+9. Uber Pauses Self Driving Cars Testing, [Self-driving Uber car kills Arizona woman crossing street | Reuters](http://www.reuters.com/article/us-autos-selfdriving-uber/woman-dies-in-arizona-after-being-hit-by-uber-self-driving-suv-idUSKBN1GV296)
+10. New study suggests guidelines for takeover time in autonomous vehicles,  https://phys.org/news/2017-01-guidelines-takeover-automated-vehicles.html#jCp 
