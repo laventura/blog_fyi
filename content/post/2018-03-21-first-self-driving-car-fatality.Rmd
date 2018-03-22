@@ -15,6 +15,8 @@ tags:
 On the First Self-Driving Car Fatality
 By now, many of you may have heard about the sad situation of a  self-driving car, operated by Uber in Tempe, AZ with a backup safety driver, and its collision with a pedestrian that resulted in her death. 
 
+![pic: ABC15](/sdc/sdc-uber-crash.png){width=75%}
+
 As a learner of all things (especially self driving cars and robotics), I am extremely interested in this story.  I’m not interested in apportioning blame here; I’m merely interested in how the technology may (or may not) have failed, and what we can learn from this. What follows are my thoughts (and some speculation) on how the collision might have occurred, and what investigations should happen next. 
 
 *But first, a disclaimer: These are my opinions only, and they will necessarily evolve as we learn more about the incident;  I do not represent any organization involved.  I am not (yet) a self-driving car expert, although I sometimes play one on the internet.  I am definitely not a lawyer, and I wouldn’t want to play one anywhere. I am merely a very concerned citizen, and my opinions will evolve based on facts as they emerge.*
@@ -31,16 +33,16 @@ The statistics on car accidents are well known and rather grim. Every year, in t
 
 The chart below shows the nature of fatalities in 2016. 
 
-[image:5904C0A1-E214-44C9-9762-5B101E1FF1A1-383-0000C69C985965F2/Traffic Stats.png]
+![Traffic Stats](/sdc/sdc-traffic-stats.png)
 
 In 2016 alone, almost 6000 pedestrians died in crashes; this relates to about 6000 people injured per day (of which ~180 are pedestrians/day). Overall, approximately 70,000 pedestrians are injured every year due to traffic accidents. 
 
-[image:848C2CFE-1D56-42A2-8E91-8900CA51B576-383-0000C6A3E636E5B6/traffic-ped-stat1.png]
+![Pedestrian Fatalities](/sdc/traffic-ped-stat1.png)
 
 
 Traffic safety is measured in “fatalities per vehicle miles traveled (VMT)”, or more accurately in fatalities per 100 million VMT.  In 2016, this fatality rate per 100 million VMT was 1.18, up slightly from 1.15 in 2015. The rate has been more or less stable (+/- ~2 %-points) since 2009. In all, Americans drove 3.2 trillion miles in 2016, while encountering approximately 37,000 fatalities.  The injury rate per 100 VMT is about far higher at about 79 (2015, when last data was available). 
 
-[image:D132FE81-E008-4FEC-AAD9-ED305FD8146E-383-0000C6A65DDE493A/traffic-fatality.png]
+![Fatality Trends, NHTSA](/sdc/traffic-fatality.png)
 
 
 [National Safety Council](http://www.nsc.org/NewsDocuments/2017/12-month-estimates.pdf) (different from NHTSA) estimates about 40,000 fatalities in 2016, and estimates costs of approximately $433 billion (2016) due to vehicular death, injuries, property damages and lost productivity.
@@ -62,8 +64,19 @@ Without the benefit of actual crash data from the Uber vehicle and any actual fo
 
 ### Sensor failure?
 
+Did one or more sensors on the Uber autonomous car fail?
 
-Based on the evidence above (and nothing else so far), it is highly unlikely that the sensors failed in this situation.
+Let’s see. Uber’s AV is fully equipped with multiple, redundant sensors of all kinds: 
+- Short and long range cameras. Uber’s car has an array of front facing cameras that watch for other vehicles, pedestrians, traffic lights and signage. Rear and side facing cameras complement the front-facing cameras to provide a more complete picture and present a continuous view of vehicle’s surroundings.
+- Top mounted Lidar for full 360 degree view, with range of a few hundred feet. Heavy snow and fog could possibly reduce its accuracy, but that was not the case here. The lidar produces a 3D point cloud with high precision showing all obstacles in its view, with depth perception. 
+- Radars. These units provide “visibility” to larger obstacles (like other cars), but possibly not smaller objects like animals or people. Radar is also lower range and lower resolution and complements the lidar. 
+
+Folks at TechCrunch have a good picture of typical Uber AV.
+
+<img src="https://techcrunch.com/wp-content/uploads/2018/03/uber-atg-volvo.jpg" width=700 />
+(pic: TechCrunch)
+
+Based on the evidence above (and nothing else so far) and because of redundancy of sensors, it is highly unlikely that the sensors failed in this situation.
 
 ### Prediction failure?
 
@@ -103,11 +116,11 @@ What should happen next?
 
 I believe three things should be followed up:
 
-- Airline style investigation. This case deserves a full airline crash style investigation, wherein the crash data from the black box (all the sensors in the AV) is reviewed thoroughly to establish the conditions that led to the crash.
-- Sharing of crash data  with other AV makers. More importantly, I think all such crash data, especially that involves collisions with humans, should be shared in the automotive industry. Uber should definitely share it with its own partners; however, the NHTSA should also make the data available to other AV manufacturers so that they can train their autonomous vehicles in these crash situations. After all, if autonomous vehicles learn from each other, this makes perfect sense, and all car OEMs, and other AV stakeholders should demand sharing of this data willingly. How likely will this be? That is anybody’s guess.
-- Legality of at-fault. The most vexing question is: who is liable? This requires a full policy discussion, and there are various debates already underway.  I am not a lawyer, but as a citizen I would like to see clear cut criteria and policies on the liabilities, and wherever ambiguities lie, exactly how to resolve them.
+- **Airline style investigation.** This case deserves a full airline crash style investigation, wherein the crash data from the black box (all the sensors in the AV) is reviewed thoroughly to establish the conditions that led to the crash.
+- **Sharing of crash data  with other AV makers.** More importantly, I think all such crash data, especially that involves collisions with humans, should be shared in the automotive industry. Uber should definitely share it with its own partners; however, the NHTSA should also make the data available to other AV manufacturers so that they can train their autonomous vehicles in these crash situations. After all, if autonomous vehicles learn from each other, this makes perfect sense, and all car OEMs, and other AV stakeholders should demand sharing of this data willingly. How likely will this be? That is anybody’s guess.
+- **Legality of at-fault.** The most vexing question is: who is liable? This requires a full policy discussion, and there are various debates already underway.  I am not a lawyer, but as a citizen I would like to see clear cut criteria and policies on the liabilities, and wherever ambiguities lie, exactly how to resolve them.
 
-This is not the last word on this incident. Stay tuned for more.
+This is not the last word on this incident. I will be watching this closely. Stay tuned for more.
 
 ### References
 1. https://www.reuters.com/article/us-autos-selfdriving-uber/self-driving-uber-car-kills-arizona-woman-crossing-street-idUSKBN1GV296
