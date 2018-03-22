@@ -15,7 +15,7 @@ tags:
 On the First Self-Driving Car Fatality
 By now, many of you may have heard about the sad situation of a  self-driving car, operated by Uber in Tempe, AZ with a backup safety driver, and its collision with a pedestrian that resulted in her death. 
 
-![pic: ABC15](/sdc/sdc-uber-crash.png){width=75%}
+![pic: ABC15](/sdc/sdc-uber-crash.png){width=100%}
 
 As a learner of all things (especially self driving cars and robotics), I am extremely interested in this story.  I’m not interested in apportioning blame here; I’m merely interested in how the technology may (or may not) have failed, and what we can learn from this. What follows are my thoughts (and some speculation) on how the collision might have occurred, and what investigations should happen next. 
 
@@ -33,16 +33,16 @@ The statistics on car accidents are well known and rather grim. Every year, in t
 
 The chart below shows the nature of fatalities in 2016. 
 
-![Traffic Stats](/sdc/sdc-traffic-stats.png)
+![Traffic Stats](/sdc/sdc-traffic-stats.png){width=640}
 
 In 2016 alone, almost 6000 pedestrians died in crashes; this relates to about 6000 people injured per day (of which ~180 are pedestrians/day). Overall, approximately 70,000 pedestrians are injured every year due to traffic accidents. 
 
-![Pedestrian Fatalities](/sdc/traffic-ped-stat1.png)
+![Pedestrian Fatalities](/sdc/traffic-ped-stat1.png){width=640}
 
 
 Traffic safety is measured in “fatalities per vehicle miles traveled (VMT)”, or more accurately in fatalities per 100 million VMT.  In 2016, this fatality rate per 100 million VMT was 1.18, up slightly from 1.15 in 2015. The rate has been more or less stable (+/- ~2 %-points) since 2009. In all, Americans drove 3.2 trillion miles in 2016, while encountering approximately 37,000 fatalities.  The injury rate per 100 VMT is about far higher at about 79 (2015, when last data was available). 
 
-![Fatality Trends, NHTSA](/sdc/traffic-fatality.png)
+![Fatality Trends, NHTSA](/sdc/traffic-fatality.png){width=640}
 
 
 [National Safety Council](http://www.nsc.org/NewsDocuments/2017/12-month-estimates.pdf) (different from NHTSA) estimates about 40,000 fatalities in 2016, and estimates costs of approximately $433 billion (2016) due to vehicular death, injuries, property damages and lost productivity.
@@ -123,13 +123,13 @@ I believe three things should be followed up:
 This is not the last word on this incident. I will be watching this closely. Stay tuned for more.
 
 ### References
-1. https://www.reuters.com/article/us-autos-selfdriving-uber/self-driving-uber-car-kills-arizona-woman-crossing-street-idUSKBN1GV296
-2. https://www.sfchronicle.com/business/article/Exclusive-Tempe-police-chief-says-early-probe-12765481.php
+1. [Uber self-driving car accident](https://www.reuters.com/article/us-autos-selfdriving-uber/self-driving-uber-car-kills-arizona-woman-crossing-street-idUSKBN1GV296)
+2. [Tempe police chief says early probe shows no fault by Uber](https://www.sfchronicle.com/business/article/Exclusive-Tempe-police-chief-says-early-probe-12765481.php)
 3. [U.S. Traffic Deaths Rise for a Second Straight Year - The New York Times](https://www.nytimes.com/2017/02/15/business/highway-traffic-safety.html)
-4. National Safety Council Fatality Estimates: http://www.nsc.org/NewsDocuments/2017/12-month-estimates.pdf
+4. [National Safety Council Fatality Estimates](http://www.nsc.org/NewsDocuments/2017/12-month-estimates.pdf)
 5. TechCrunch: [Here’s how Uber’s self-driving cars are supposed to detect pedestrians – TechCrunch](https://techcrunch.com/2018/03/19/heres-how-ubers-self-driving-cars-are-supposed-to-detect-pedestrians/?utm_source=tctwreshare&utm_medium=feed&utm_campaign=Feed%3A+Techcrunch+%28TechCrunch%29&sr_share=twitter)
 6. [The Uber fatality shows we don’t know if driverless cars are safer - The Washington Post](https://www.washingtonpost.com/opinions/no-driverless-cars-arent-far-safer-than-human-drivers/2018/03/20/5dc77f42-2ba9-11e8-8ad6-fbc50284fce8_story.html?utm_term=.59751b67e51b)
-7. NHTSA, 2016 Fatal Traffic Crash Data, [USDOT Releases 2016 Fatal Traffic Crash Data | NHTSA](https://www.nhtsa.gov/press-releases/usdot-releases-2016-fatal-traffic-crash-data)
+7. [NHTSA - USDOT Releases 2016 Fatal Traffic Crash Data](https://www.nhtsa.gov/press-releases/usdot-releases-2016-fatal-traffic-crash-data)
 8. NYTimes, [Where Self-Driving Cars Go to Learn - The New York Times](https://www.nytimes.com/2017/11/11/technology/arizona-tech-industry-favorite-self-driving-hub.html)
 9. Uber Pauses Self Driving Cars Testing, [Self-driving Uber car kills Arizona woman crossing street | Reuters](http://www.reuters.com/article/us-autos-selfdriving-uber/woman-dies-in-arizona-after-being-hit-by-uber-self-driving-suv-idUSKBN1GV296)
-10. New study suggests guidelines for takeover time in autonomous vehicles,  https://phys.org/news/2017-01-guidelines-takeover-automated-vehicles.html#jCp 
+10. [New study suggests guidelines for takeover time in autonomous vehicles](https://phys.org/news/2017-01-guidelines-takeover-automated-vehicles.html#jCp) 
