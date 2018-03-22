@@ -66,7 +66,12 @@ tags:
 </section>
 <section id="prediction-failure" class="level3">
 <h3>Prediction failure?</h3>
-<p>The prediction subsystem in an autonomous vehicle is responsible for three critical functions: * Predicting the behavior of other cars, pedestrians, etc. on the road * Planning the autonomous vehicle’s own behavior * Planning its own trajectory</p>
+<p>The prediction subsystem in an autonomous vehicle is responsible for three critical functions:</p>
+<ul>
+<li>Predicting the behavior of other cars, pedestrians, etc. on the road</li>
+<li>Planning the autonomous vehicle’s own behavior</li>
+<li>Planning its own trajectory</li>
+</ul>
 <p>All of these functions are use complex mathematical models. Predicting the behavior of other dynamic objects on the road first starts with sensing their precise location (obtained from sensor fusion data above), and using a hybrid of process- and data-models to predict where each object will move. These models use highly sophisticated techniques like probabilistic and optimization models that predict where a dynamic object (e.g. pedestrian, a car, or an errant animal darting across the road) will be in the next instant, and update their prediction based on actual sensor data. This predict-update cycle occurs hundreds or thousands of times per second, and can accurately predict a smooth trajectory for moving objects. [For the technically minded, these techniques are a combination of Kalman filters, expectation-maximization, probabilistic models, and can also be learned from data.]</p>
 <p>People crossing a road, in most cases, do not randomly walk. In the face of traffic, they either speed up to get to the other side, or they pause or stop briefly to confront incoming vehicles expecting them to slow down or stop, or or they backtrack to safety and let incoming traffic pass. However, one could speculate a pedestrian, unaware and randomly walking onto the road. In this case, it <em>is</em> hard to predict their move, especially if it is completely random. And for an autonomous system to predict such a move would be a tall order. However, if the vehicle had sufficient time, it would normally slow down, or even brake suddenly.</p>
 <p>Did the prediction function fail in this case? It is hard to say conclusively. However, it appears that since the pedestrian “suddenly appeared on the road, with her bike full of shopping bags”, the prediction system apparently did not, or could not, accurately predict her next move. And this is possibly likely especially if she was crossing the high traffic road not at an intersection.</p>

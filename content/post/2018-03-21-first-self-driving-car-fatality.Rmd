@@ -82,6 +82,7 @@ Based on the evidence above (and nothing else so far) and because of redundancy 
 ### Prediction failure?
 
 The prediction subsystem in an autonomous vehicle is responsible for three critical functions:
+
 * Predicting the behavior of other cars, pedestrians, etc. on the road
 * Planning the autonomous vehicle’s own behavior 
 * Planning its own trajectory 
