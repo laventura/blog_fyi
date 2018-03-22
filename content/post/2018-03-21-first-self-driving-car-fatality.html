@@ -61,8 +61,9 @@ tags:
 <li>Radars. These units provide “visibility” to larger obstacles (like other cars), but possibly not smaller objects like animals or people. Radar is also lower range and lower resolution and complements the lidar.</li>
 </ul>
 <p>Folks at TechCrunch have a good picture of typical Uber AV.</p>
-<p><img src="https://techcrunch.com/wp-content/uploads/2018/03/uber-atg-volvo.jpg" width=700 /> (pic: TechCrunch)</p>
-<p>Based on the evidence above (and nothing else so far) and because of redundancy of sensors, it is highly unlikely that the sensors failed in this situation.</p>
+<p><img src="https://techcrunch.com/wp-content/uploads/2018/03/uber-atg-volvo.jpg" width=700 /></p>
+<p>(pic: TechCrunch)</p>
+<p>Based on the sensor picture above (and nothing else so far) and because of redundancy of sensors, it is highly unlikely that the sensors failed in this situation. This needs to be corroborated with any sensor data, obviously.</p>
 </section>
 <section id="prediction-failure" class="level3">
 <h3>Prediction failure?</h3>
@@ -74,13 +75,13 @@ tags:
 </ul>
 <p>All of these functions are use complex mathematical models. Predicting the behavior of other dynamic objects on the road first starts with sensing their precise location (obtained from sensor fusion data above), and using a hybrid of process- and data-models to predict where each object will move. These models use highly sophisticated techniques like probabilistic and optimization models that predict where a dynamic object (e.g. pedestrian, a car, or an errant animal darting across the road) will be in the next instant, and update their prediction based on actual sensor data. This predict-update cycle occurs hundreds or thousands of times per second, and can accurately predict a smooth trajectory for moving objects. [For the technically minded, these techniques are a combination of Kalman filters, expectation-maximization, probabilistic models, and can also be learned from data.]</p>
 <p>People crossing a road, in most cases, do not randomly walk. In the face of traffic, they either speed up to get to the other side, or they pause or stop briefly to confront incoming vehicles expecting them to slow down or stop, or or they backtrack to safety and let incoming traffic pass. However, one could speculate a pedestrian, unaware and randomly walking onto the road. In this case, it <em>is</em> hard to predict their move, especially if it is completely random. And for an autonomous system to predict such a move would be a tall order. However, if the vehicle had sufficient time, it would normally slow down, or even brake suddenly.</p>
-<p>Did the prediction function fail in this case? It is hard to say conclusively. However, it appears that since the pedestrian “suddenly appeared on the road, with her bike full of shopping bags”, the prediction system apparently did not, or could not, accurately predict her next move. And this is possibly likely especially if she was crossing the high traffic road not at an intersection.</p>
-<p>Now, most autonomous vehicles are likely trained for some semblance of situations like these: small animals darting across the road, people jaywalking, etc. However, in the unlikely event that</p>
+<p>Did the prediction function fail in this case? It is hard to say conclusively. However, it appears that since the pedestrian “suddenly appeared on the road, with her bike full of shopping bags”, the prediction system apparently did not, or could not, accurately predict her next move. And this is possibly likely especially if she was crossing the high traffic road not at an intersection, or under obscure lighting conditions.</p>
+<p>Now, most autonomous vehicles are likely trained for some semblance of situations like these: small animals darting across the road, people jaywalking, etc. However, in the unlikely event that the sensors did not correctly detect the pedestrian, it is unclear how the prediction function should proceed, without fully looking at sensor data.</p>
 </section>
 <section id="takeover-time-was-too-short" class="level3">
 <h3>Takeover time was too short?</h3>
 <p>In all likelihood, the time for takeover by backup safety was too short in this case. The takeover time is the delay between the instant the autonomous system gives up control of the car by signaling to the backup driver, and the time the driver actually takes control.</p>
-<p>What does research say about ideal takeover time? A <a href="https://www.sciencedaily.com/releases/2017/01/170126081625.htm">study by University of Southampton</a> notes that drivers need anywhere from <a href="https://phys.org/news/2017-01-guidelines-takeover-automated-vehicles.html">~2 seconds to 25 seconds for transition</a>, depending on the task they were doing before taking control. In particular:</p>
+<p>What does research say about ideal takeover time? A <a href="https://www.sciencedaily.com/releases/2017/01/170126081625.htm">study by University of Southampton</a> notes that drivers need anywhere from <a href="https://phys.org/news/2017-01-guidelines-takeover-automated-vehicles.html">~2 seconds to 25 seconds for transition</a>, <strong>depending on the task they were doing before taking control.</strong> In particular:</p>
 <blockquote>
 <p>a too-short lead time (e.g., 7 seconds prior to taking control, as found in some studies of critical response time) could prevent drivers from responding optimally, resulting in a stressed transition process whereby drivers may accidentally swerve, making sudden lane changes or braking harshly. Such actions are acceptable in safety-critical scenarios when drivers may have to avoid a crash but could pose a safety hazard for other road users in noncritical situations.</p>
 </blockquote>
@@ -94,7 +95,7 @@ tags:
 <section id="what-next" class="level2">
 <h2>What Next?</h2>
 <p>So it’s the pedestrian’s fault, and no blame to the backup driver or the company?</p>
-<p>Well, that is not so simple. We are still in the human-controlled autonomy era and until we have full confidence in our autonomous systems, regardless of who is at fault, the blame will be placed on autonomous vehicles? Why, simply because we, as humans, demand a simple cause-and-effect, more so in stressful situations like this one.</p>
+<p>Well, that is not so simple. We are still in the human-controlled autonomy era and until we have full confidence in our autonomous systems, regardless of who is at fault, the blame will be placed on autonomous vehicles. Why? Simply because we, as humans, demand a simple cause-and-effect rationale, more so in stressful situations like this one.</p>
 <p>What should happen next?</p>
 <p>I believe three things should be followed up:</p>
 <ul>
