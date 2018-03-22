@@ -67,6 +67,7 @@ Without the benefit of actual crash data from the Uber vehicle and any actual fo
 Did one or more sensors on the Uber autonomous car fail?
 
 Let’s see. Uber’s AV is fully equipped with multiple, redundant sensors of all kinds: 
+
 - Short and long range cameras. Uber’s car has an array of front facing cameras that watch for other vehicles, pedestrians, traffic lights and signage. Rear and side facing cameras complement the front-facing cameras to provide a more complete picture and present a continuous view of vehicle’s surroundings.
 - Top mounted Lidar for full 360 degree view, with range of a few hundred feet. Heavy snow and fog could possibly reduce its accuracy, but that was not the case here. The lidar produces a 3D point cloud with high precision showing all obstacles in its view, with depth perception. 
 - Radars. These units provide “visibility” to larger obstacles (like other cars), but possibly not smaller objects like animals or people. Radar is also lower range and lower resolution and complements the lidar. 
