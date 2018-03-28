@@ -36,9 +36,11 @@ I keep a broad interest in applied AI, and here are a few interesting uses cases
 
 - **Deep Learning** -  I completed several specializations: [Deep Learning (Andrew Ng's new 5-course)](https://www.coursera.org/account/accomplishments/specialization/certificate/AQEGV5ZLBS2P), [Machine Learning Specialization (from Univ. of Washington)](https://www.coursera.org/account/accomplishments/specialization/certificate/8ABRKKSSM4AP), [Artificial Intelligence Nanodegree](https://confirm.udacity.com/5GN6ARGK) from Udacity, and some more. See [here for my reviews](http://atul.fyi/post/2016/03/01/on-learning-deep-learning/).
 
-- **Autonomous Systems** - Self Driving Cars, Robotics. I completed Udacity's [Self-Driving Car Nanodegree](https://confirm.udacity.com/D4PF3GHQ) in 2017.
+- **Autonomous Systems** - Self Driving Cars, Robotics. I completed Udacity's [Self-Driving Car Nanodegree](https://confirm.udacity.com/D4PF3GHQ) in 2017. I'm learning how to teach robots.
 
-- **Mobile Apps** -  I build iOS apps (mostly for myself)
+- **Mobile Apps** -  I build iOS apps and mobile experiences.
+
+- **Reinforcement Learning** - Learning and teaching robots. 
 
 ### My brief philosophy
 
@@ -62,7 +64,7 @@ Primary areas that interest me:
 
 - Mobile: mobile apps/services - Messaging, Ads/Analytics, Mobile Commerce/Payments
 - Mobile devices: Smartphones, Tablets, Connected Devices (Wearables, Set-Top Boxes, IOT)
-- Autonomous Systems: Self-Driving Cars, Robotics (new)
+- Autonomous Systems: Self-Driving Cars, Robotics
 - Retail Tech: Ecommerce, Analytics
 
 
