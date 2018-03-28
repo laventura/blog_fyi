@@ -12,12 +12,13 @@ tags:
   - regulations
 ---
 
-On the First Self-Driving Car Fatality
 By now, many of you may have heard about the sad situation of a  self-driving car, operated by Uber in Tempe, AZ with a backup safety driver, and its collision with a pedestrian that resulted in her death. 
 
 ![pic: ABC15](/sdc/sdc-uber-crash.png){width=100%}
 
 As a learner of all things (especially self driving cars and robotics), I am extremely interested in this story.  I’m not interested in apportioning blame here; I’m merely interested in how the technology may (or may not) have failed, and what we can learn from this. What follows are my thoughts (and some speculation) on how the collision might have occurred, and what investigations should happen next. 
+
+> **Update 3/27/2018** It is now clear, [after several news reports](https://jalopnik.com/lidar-maker-velodyne-blame-to-uber-in-fatal-self-drivin-1824027977), that Lidar(s) did not "see" the pedestrian. I am keeping this post as is (mostly), and will update with my thoughts on both this unfortunate incident and failure in general. 
 
 *But first, a disclaimer: These are my opinions only, and they will necessarily evolve as we learn more about the incident;  I do not represent any organization involved.  I am not (yet) a self-driving car expert, although I sometimes play one on the internet.  I am definitely not a lawyer, and I wouldn’t want to play one anywhere. I am merely a very concerned citizen, and my opinions will evolve based on facts as they emerge.*
 
@@ -79,6 +80,8 @@ Folks at TechCrunch have a good picture of typical Uber AV.
 (pic: TechCrunch)
 
 Based on the sensor picture above (and nothing else so far) and because of redundancy of sensors, it is highly unlikely that the sensors failed in this situation. This needs to be corroborated with any sensor data, obviously.
+
+> **Update 3/27/2018** It is now clear, after multiple reports, that the sensor subsystem did not "sense" the pedestrian. I am keeping this post for posterity, and will update with my comments on how/why of this catastrophic failure.
 
 ### Prediction failure?
 
