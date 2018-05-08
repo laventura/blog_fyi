@@ -1,0 +1,66 @@
+---
+title: 'On the Self-Driving Car Fatality - Part Deux '
+author: Atul Acharya
+date: '2018-05-07'
+slug: on-the-self-driving-fatality-part-deux
+categories:
+  - Autonomous Systems
+  - Self Driving Car
+tags:
+  - Autonomous Systems
+  - regulations
+  - Self Driving Car
+---
+
+
+
+<p>So it has been nearly two months since the first self-driving car fatality (see my previous post <a href="https://atul.fyi/post/2018/03/21/first-self-driving-car-fatality/">here</a>). I deliberately held off writing more on this until new facts emerged.</p>
+<p>And it looks like now we finally know the cause of the accident.</p>
+<figure>
+<img src="https://imgs.xkcd.com/comics/driving_cars.png" alt="credit: XKCD" /><figcaption>credit: XKCD</figcaption>
+</figure>
+<section id="investigation-and-new-facts" class="level2">
+<h2>Investigation and new facts</h2>
+<p>Following the accident, Uber quite rightly withdrew all its autonomous vehicles from road tests. This is not just a safety precaution — after all, these vehicles are under <em>test</em> — but is also likely a legal requirement as part of the investigation.</p>
+<p>An investigation followed which was jointly conducted with the National Transport Safety Board (NTSB). To Uber’s credit, the investigation was quick, and the data was indeed shared. We are still awaiting full results.</p>
+<p>The <a href="http://money.cnn.com/2018/03/19/technology/uber-autonomous-car-fatal-crash/index.html">video released</a> by the investigators [1] (caution: the video has graphic content of the collision, use your judgment) clearly shows the pedestrian Elaine Herzberg walking her bicycle at night, <em>not at an intersection</em>, across the road. The Volvo XC90, equipped with a top mounted lidar, clearly collided with the pedestrian without stopping. An internal dash cam shows the backup safety driver (who was perhaps momentarily not paying attention) suddenly shocked at the approaching collision. It is indeed a disturbing video.</p>
+<p>After watching the video, my subsequent analysis was that:</p>
+<ul>
+<li>the sensors probably malfunctioned due to low light (but the lidar is meant to detect objects even in very low visibility conditions)</li>
+<li>the prediction software didn’t appropriately signal an intervention, or</li>
+<li>the intervention time was too short (&lt; 2 seconds), which likely resulted in the collision</li>
+</ul>
+<p>It turns out that perception system <em>did</em> infact detect the pedestrian, as reported by <a href="https://www.theinformation.com/articles/uber-finds-deadly-accident-likely-caused-by-software-set-to-ignore-objects-on-road?jwt=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3RhcmVhbGVtYWlsYWRkcmVzc0BmYWtlZW1haWwuY29tIiwiZXhwIjoxNTU3MjczODcxLCJuIjoiR3Vlc3QiLCJzY29wZSI6WyJzaGFyZSJdfQ.gYV6TdLggVBJhexCTO5U8AAy9QAklFklDGrO2XZ8p_w&amp;unlock=c7224771579b960e">The Information</a>, but it rejected the detection as a “false positive” and the vehicle continued operating resulting in the unfortunate collision.</p>
+<p>So it was indeed a software glitch that caused the collision.</p>
+</section>
+<section id="what-this-means" class="level2">
+<h2>What This Means</h2>
+<p>What does a <strong>false positive</strong> in the perception system mean? It means the system does not have enough confidence that an object is detected. The confidence level is a tunable parameter that affects not just the perception module, but the entire system performance.</p>
+<p>A high confidence detection implies that every object - no matter how small or relevant - will be accurately detected. We, as passengers, drivers or indeed pedestrians on the road, <em>want</em> a high-confidence detection for our own safety. But that also implies that the autonomous vehicle will slow down or indeed stop at every object thus detected. It thus implies a jerky and an uncomfortable ride in the autonomous vehicle.</p>
+<p>On the other hand, a low(er) confidence detection implies the opposite - objects with low confidence detection (such as trash on the road, a plastic bag, etc.) could be ignored, and thus the AV does not have to pause as frequently. It implies a smoother ride.</p>
+<p>Clearly, this tunable level of confidence has large implications - both for occupants of the AVs, as well as pedestrians, bicyclists and other people on the road. Ideally, we want both a high confidence detection for safety purposes, and a comfortable ride.</p>
+<p>This essential trade-off is at the crux of most machine learning systems and indeed with all self-driving vehicles. How we resolve this, and all other trade-offs, depends largely on our thrust for automation, for comfort, our public policy frameworks, regulations for safety of autonomous cars, and more.</p>
+</section>
+<section id="whats-next-for-the-industry" class="level2">
+<h2>What’s Next for the Industry</h2>
+<p>In the time since the first self-driving car collision, two other accidents have occurred. First was a Tesla Model X running on autopilot <a href="https://www.mercurynews.com/2018/03/30/tesla-autopilot-was-on-during-deadly-mountain-view-crash/">Tesla: Autopilot was on during deadly Mountain View crash</a> that ended up killing the driver right in Mountain View; the investigation is still going on.</p>
+<p>Second is the more recent Waymo’s Pacifica minivan that was “involved” in an accident, but, <em>prima facie</em>, [was not at fault] (<a href="http://www.latimes.com/business/autos/la-fi-waymo-crash-20180504-story.html" class="uri">http://www.latimes.com/business/autos/la-fi-waymo-crash-20180504-story.html</a>). Waymo’s vehicle was “at the wrong place, at the wrong time” (per initial police reports).</p>
+<p>Clearly, these are not the last accidents that have occurred; there will, sadly, be other accidents.</p>
+<p>What should be done with these?</p>
+<p>As regulations go, we are in new territory with respect to self-driving vehicles. The legality of at-fault will be discussed in detail. NTSB continues its investigations. But meanwhile, there is some hope, right from the tech industry.</p>
+<p><a href="http://voyage.auto">Voyage</a>, the self-driving taxi, has released its <em>Open Autonomous Safety (OAS)</em> initiative. See <a href="https://news.voyage.auto/open-sourcing-our-approach-to-autonomous-safety-434b1ab13a93">Open-Sourcing Our Approach to Autonomous Safety – Voyage</a>. It is the first in industry to open-source its safety tests for self-driving cars. As an initiative this is to be lauded if the industry is to make (faster) progress on both technology as well as safety.</p>
+<p>The test suite consists of series of tests for scenario testing, functional safety, autonomy assessment and a testing toolkit.</p>
+<p>I hope this is a start and that other industry players will either cooperate and/or release their own test suites.</p>
+<p>More on this as it progresses. I will be watching this space with interest.</p>
+<section id="references" class="level3">
+<h3>References:</h3>
+<ol type="1">
+<li>CNN, “Uber self-driving car kills pedestrian in first fatal autonomous crash”, <a href="http://money.cnn.com/2018/03/19/technology/uber-autonomous-car-fatal-crash/index.html">Uber pulls self-driving cars after first fatal crash of autonomous vehicle</a></li>
+<li>Reuters, <a href="https://www.reuters.com/article/us-uber-selfdriving/uber-hires-former-ntsb-chair-to-advise-on-safety-culture-after-fatal-crash-idUSKBN1I81Z4">Uber sets safety review; media report says software cited in fatal crash | Reuters</a></li>
+<li>TechCrunch, <a href="https://techcrunch.com/2018/05/07/uber-vehicle-reportedly-saw-but-ignored-woman-it-struck/">Uber vehicle reportedly saw but ignored woman it struck – TechCrunch</a></li>
+<li>ArsTechnica, <a href="https://arstechnica.com/tech-policy/2018/05/report-software-bug-led-to-death-in-ubers-self-driving-crash/">Report: Software bug led to death in Uber’s self-driving crash | Ars Technica</a></li>
+<li>XKCD, <a href="https://xkcd.com/1990/">xkcd: Driving Cars</a></li>
+<li>Voyage Autonomous Safety, <a href="https://voyage.auto/open-autonomous-safety/">Voyage - Open Autonomous Safety - Collaborating for a safe autonomous future</a></li>
+</ol>
+</section>
+</section>
