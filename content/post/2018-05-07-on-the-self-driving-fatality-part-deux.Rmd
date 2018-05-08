@@ -49,9 +49,9 @@ This essential trade-off is at the crux of most machine learning systems and ind
 
 ## What’s Next for the Industry
 
-In the time since the first self-driving car collision, two other accidents have occurred. First was a Tesla Model X running on autopilot [Tesla: Autopilot was on during deadly Mountain View crash](https://www.mercurynews.com/2018/03/30/tesla-autopilot-was-on-during-deadly-mountain-view-crash/) that ended up killing the driver right in Mountain View; the investigation is still going on.
+In the time since the first self-driving car collision, two other accidents have occurred. First was a Tesla Model X [running on autopilot](https://www.mercurynews.com/2018/03/30/tesla-autopilot-was-on-during-deadly-mountain-view-crash/) that ended up killing the driver right in Mountain View; the investigation is still going on.
 
-Second is the more recent Waymo’s Pacifica minivan that was “involved” in an accident, but, _prima facie_, [was not at fault] (http://www.latimes.com/business/autos/la-fi-waymo-crash-20180504-story.html). Waymo’s vehicle was “at the wrong place, at the wrong time” (per initial police reports). 
+Second is the more recent Waymo’s Pacifica minivan that was “involved” in an accident, but, _prima facie_, [was not at fault](http://www.latimes.com/business/autos/la-fi-waymo-crash-20180504-story.html). Waymo’s vehicle was “at the wrong place, at the wrong time” (per initial police reports). 
 
 Clearly, these are not the last accidents that have occurred; there will, sadly, be other accidents.
 
