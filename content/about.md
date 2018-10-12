@@ -7,7 +7,8 @@ Hi there. 👋
 
 My name is Atul Acharya; I'm a maker and builder of things, and I love learning.
 
-This site exists primarily to document my own learning adventures over the years.
+This site exists primarily to document my own learning adventures over the years. 
+
 
 ### Contact
 
@@ -68,4 +69,6 @@ Primary areas that interest me:
 - Retail Tech: Ecommerce, Analytics
 
 
-More to come...
+### Disclosure
+[
+*eedless to say, all opinions are mine, not of any employer's or organization's, past, present or future. These opinions will evolve as I learn more.]*
