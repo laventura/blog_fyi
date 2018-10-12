@@ -70,5 +70,4 @@ Primary areas that interest me:
 
 
 ### Disclosure
-[
-*eedless to say, all opinions are mine, not of any employer's or organization's, past, present or future. These opinions will evolve as I learn more.]*
+[Needless to say, all opinions are mine, not of any employer's or organization's, past, present or future. These opinions will evolve as I learn more.]
