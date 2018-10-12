@@ -44,9 +44,13 @@ In the last few years, urban accidents have risen more than rural accidents.
 ![Occupants. Source: NHTSA](/sdc/fatality-composition2.png){width=100%}
 
 
-So, not only are thousands of occupants killed in traffic accidents, but also over 6000 non-occupants are also killed. These include pedestrians, cyclists, motor-cyclists, and others. So traffic accidents have *huge externalities* in terms of costs of medical care, property damage, lost productivity, lost wages, and more. Some estimates of care and damage run about *$850 billion per year* on an aggregate basis (McKinsey? NHTSA?). As if the loss of one life wasn’t enough, this is a huge economic loss on top of that. 
+So, not only are thousands of occupants killed in traffic accidents, but also over 6000 non-occupants are killed. These include pedestrians, cyclists, motor-cyclists, and others. So traffic accidents have *huge externalities* in terms of costs of medical care, property damage, lost productivity, lost wages, and more. Some estimates of care and damage run about *$850 billion per year* on an aggregate basis (McKinsey? NHTSA?). As if the loss of one life wasn’t enough, this is a huge economic loss on top of that. 
+
+![Fatality by Age, NHTSA](/sdc/fatality-age.png){width=100%}
 
 Who are the people who die in accidents? NHTSA data again shows that older drivers (65+) are now much more likely to be involved in accidents than younger (25 or below). This is interesting to note, given the demographically speaking, the population is aging in the US (as it is elsewhere). So, net-net, drivers are getting older, and despite all the tech advances, there are over thousands of accidents, caused largely by humans.
+
+
 
 ### Causes of Accidents
 So, what causes these traffic accidents? NHTSA estimates are around *94% of accidents are caused by human errors*. These involve impaired driving (e.g. drunk driving, sleepy drivers), illegal maneuvers (speeding, not following the road rules), distracted driving and more. Over 29% of deaths are due to drunk driving. That’s almost 11,000 drunk-driving deaths. Speeding alone causes over 10,000 deaths per year.  [For more stats, see here [Road Safety Facts — Association for Safe International Road Travel](https://www.asirt.org/safe-travel/road-safety-facts/)]
