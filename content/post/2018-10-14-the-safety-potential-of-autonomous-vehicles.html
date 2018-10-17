@@ -1,0 +1,131 @@
+---
+title: The Safety Potential of Autonomous Vehicles
+author: Atul Acharya
+date: '2018-10-14'
+slug: the-safety-potential-of-autonomous-vehicles
+categories:
+  - Autonomous Systems
+  - Self Driving Car
+tags:
+  - Autonomous Systems
+  - Self Driving Car
+  - Robotics
+---
+
+
+
+<p>In my <a href="https://atul.fyi/post/2018/10/11/the-potential-and-promise-of-self-driving-cars/">previous post</a>, I talked about the potential and promise of self-driving cars. I cheated a bit and talked mostly about the human driving record, as the US traffic stats show. In this post, I’ll cover the promise of safety of autonomous vehicles (AVs).</p>
+<section id="history" class="level2">
+<h2>History</h2>
+<p>To recap, human driving is remarkably safe, despite all the news of traffic accidents, crashes, injuries and more. To date, US traffic fatality rate is around <strong>1.1 deaths per 100 million vehicle miles traveled</strong> (100 Million VMT); this is over <em>3 trillion miles traveled</em> in about <em>260 million registered vehicles</em>, by over <em>216 million registered drivers</em>. While the fatality rate is historically low, drivers have caused over 6.95 million crashes (2016), and over 3 million injuries in traffic accidents (2016). On aggregate, this is a staggeringly high number.</p>
+<p>The following chart shows the decline in fatality rate over the last ~125 years (1899-2016).</p>
+<figure>
+<img src="/sdc/US_Traffic_Fatalities_1899_2016.png" alt="US Traffic Fatalities" style="width:120.0%" /><figcaption>US Traffic Fatalities</figcaption>
+</figure>
+<p>In the early years of the automotive industry (c.1890s - mid 1920s), as cars slowly encroached both urban and rural public spaces, traffic accidents accounted for about 8,000-16,000 deaths. As the country grew prosperous, more cars came on the streets, and yearly deaths rose to 20,000 and beyond. Through the 1930s decade, fatality rate slowed only slowly from ~15 to ~11 per 100 M VMT. After World War II, as properity spread and in the golden years of American automotive industry (through mid 1960s), people bought more cars and drove everywhere, causing about 46K traffic deaths.</p>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/en/c/ca/Unsafeatanyspeedcover.jpg" alt="Unsafe At Any Speed" style="width:30.0%" /><figcaption>Unsafe At Any Speed</figcaption>
+</figure>
+<p>After 1965, as Ralph Nader’s <em>Unsafe at Any Speed</em> was published at the height of the automotive industry’s go-go years (1965: 47K deaths), traffic fatalities crept up even more peaking up to 54K deaths in 1973. His book argued that automotive manufacturers had consistently ignored safety precautions and designed cars more for consumer appeal than for safety. He argued for safety belts, and eventually 49 states mandated seat-belts in all vehicles; for standardizing of gear shifts from seemingly random pattern to today’s “P-R-N-D-L” pattern found in most cars; for anti-pollution, and many other consumer rights. For his foresight and troubles, he was hounded by the automotive industry, his reputation was tattered. Yet, the ensuing Senate hearings led to the creation of Department of Transportation, and other agencies like the NHTSA. Only since 1973 (i.e. since the first Arab Oil crisis) did the traffic fatalities decrease substantially. Since 1975, the fatality rate has been on a steady decline, and only in the last two decades has the rate fallen to under 1.6.</p>
+</section>
+<section id="adas-applications" class="level2">
+<h2>ADAS applications</h2>
+<p>Since about last two decades, auto makers have introduced various safety features, such as adaptive cruise control, emergency braking, and others. These advanced driver assistance systems (ADAS) are fairly prevalent as options, especially in models released in the last 5-8 years.</p>
+<p>The following table shows some of these ADAS applications and how they are enabled. [Table adapted from UBS Research]</p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 20%" />
+<col style="width: 16%" />
+<col style="width: 18%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Description</th>
+<th>Strengths</th>
+<th>Weaknesses</th>
+<th>ADAS applications</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Radar</td>
+<td>Using radio waves to measure moving or stationary objects (humans, cars), and provide direct measurement of relative speed and distance</td>
+<td>All weather capable; Can provide relative velocity</td>
+<td>Difficult to classify objects due to low angle resolution; Reflections off multiple objects can lead to errors</td>
+<td>Adaptive Cruise Control (ACC), Auto Emergency Brake (AEB), Forward Collision Warning (FCW), Blind Spot Monitoring (BSM), Lane Change Assist, Rear Cross Traffic Alert</td>
+</tr>
+<tr class="even">
+<td>——————</td>
+<td>——————</td>
+<td>——————</td>
+<td>——————</td>
+<td>——————</td>
+</tr>
+<tr class="odd">
+<td>Lidar</td>
+<td>Similar to radar, but using laser light rather than video</td>
+<td>High resolution - both horizontal / vertical; Good at classifying objects (width + height)</td>
+<td>Highly affected by weather; Dirt significantly reduces performance</td>
+<td>Emergency Brake (Urban, Rural, Pedestrian), Crash Imminent Braking</td>
+</tr>
+<tr class="even">
+<td>——————</td>
+<td>——————</td>
+<td>——————</td>
+<td>——————</td>
+<td>——————</td>
+</tr>
+<tr class="odd">
+<td>Camera</td>
+<td>Using camera images to build an image of the world around the vehicle, then using advanced algorithms to interpret the env</td>
+<td>Recognized environment, and classify images; Size calculation possible</td>
+<td>Less capable at long distances; Needs high contrast and relies on model assumptions</td>
+<td>Lane Departure Warning (LDW), Lake Keep Assist (LKA), Intelligent Headlamp Control, Traffic Sign Assist, Forward Collision Warning (FCW), Auto Emergency Braking (AEB), Road Profile Estimation</td>
+</tr>
+<tr class="even">
+<td>——————</td>
+<td>——————</td>
+<td>——————</td>
+<td>——————</td>
+<td>——————</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="potential-for-safety-benefits" class="level2">
+<h2>Potential for Safety Benefits</h2>
+<p>The potential for safety for autonomous vehicles, then, relies heavily on these ADAS technologies. As they stand today, most of these ADAS applications fall under the SAE Level 2 / Level 3 category, meaning <strong>Partial or Conditional Autonomy</strong>. That is, these functions are <em>only available under specific conditions</em>, such as speed limits, highway roads, visible lane lines, etc. Nobody would mistake these for fully autonomous vehicles. Yet, a recent AAA study (<a href="https://aaafoundation.org/vehicle-owners-experiences-reactions-advanced-driver-assistance-systems/">see here</a>) has shown than many drivers confuse the capabilities of their vehicles, often relying too much on technology, not paying enough attention to warnings and signals, and not taking over manually when appropriately signaled by the vehicle.</p>
+<p>Despite all this, another recent AAA study, <a href="https://aaafoundation.org/potential-reduction-in-crashes-injuries-and-deaths-from-large-scale-deployment-of-advanced-driver-assistance-systems/">Potential for Reduction in Crashes, Injuries, Deaths from Large-scale deployment of ADAS,</a> has shown the benefits of today’s ADAS applications, which is the meat of the story.</p>
+<p>In short, the study claims that ADAS applications such as Automatic Emergency Braking (AEB), Forward Collision Warning (FCW), Blind Spot Warning (BSW), Lane Departure Warning (LDW) and Lane Keep Assist (LKA) have the <em>potential</em> to:</p>
+<ul>
+<li>reduce traffic deaths by up to 29%</li>
+<li>reduce injuries by up to 37%</li>
+<li>reduce crashes by up to 40%</li>
+</ul>
+<p>This is summarized below.</p>
+<figure>
+<img src="/sdc/adas_reduction.png" alt="Reduction in Traffic Accidents (Source: AAA)" style="width:110.0%" /><figcaption>Reduction in Traffic Accidents (Source: AAA)</figcaption>
+</figure>
+<p>The study looked at all traffic accidents in the year 2016, and came to the conclusion above. To be sure, the study only looked at limited ADAS applications, and at the causes of various traffic accidents, and reached the conclusion <em>assuming that all vehicles</em> came equipped with these ADAS applications, and that the drivers were in a position to use these functions as applicable.</p>
+<p>Assuming all the conditions in the study hold true (which is, admittedly, a big ask), this is a staggering reduction in accidents. Even if only 10% of the potential benefits are realized, it would still be a sizable reduction in crashes, injuries and deaths. And that is with today’s capabilities. Imagine the possibilities with more capable ADAS applications, and we could potentially have a huge benefit from using autonomous vehicles. That is the promise of autonomy, and that is why a lot of people are excited about the autonomous era.</p>
+<section id="details-details" class="level3">
+<h3>Details, Details</h3>
+<p>How did the study come to this conclusion? We can look at couple of systems studied: Forward Collision Warning (FCW) and Automatic Emergency Braking (AEB).</p>
+<p>FCW and AEB systems typically use a combination of radar, lidar and camera components to determine between the equipped vehicle (ego vehicle in AV parlance) and other vehicles and objects directly ahead, and estimate time-to-collision and determine if a crash is imminent. If it is, they send control commands to automatically brake (AEB) or warn the driver to manually intervene. FCW system warns the driver, and it <em>relies on the driver to apply brakes</em>, while the AEB system automatically brakes (while potentially also warning the driver), to either eliminate or reduce the severity of (an imminent) crash. Current generation AEB and FCW systems are designed to detect vehicles, but some detect pedestrians as well. Most systems are designed to be effective within specific range of speeds, and may not operate under other some conditions (e.g. rain, fog, poor visibility, glare, background light), depending on the technology used. Therefore, the target population of potential crashes that can be prevented or mitigated include <em>rear-end collisions</em>.</p>
+<p>The study claims that FCW could have theoretically prevented approximately 69-81% of all <em>rear-end collisions</em>, 76-81% of <em>angle crashes</em>, and 23-24% of <em>single vehicle collisions</em>, which totalled approximately <em>2.3 million crashes, and 7,166 fatal crashes</em> per year between 2002 and 2006. By carefully studying the crashes and eliminating those that potentially could <em>not</em> be saved (due to, say, poor weather or driver loss of control), the study shows the total crash reduction due to FCW and AEB below.</p>
+<figure>
+<img src="/sdc/fcw_aeb_reduction.png" alt="Crash Reduction (Source: AAA)" style="width:100.0%" /><figcaption>Crash Reduction (Source: AAA)</figcaption>
+</figure>
+<p>I’d recommend the study (<a href="https://aaafoundation.org/wp-content/uploads/2018/09/18-0567_AAAFTS-ADAS-Potential-Benefits-Brief_v2.pdf">PDF here</a>) to anyone interested in understanding the sources of benefits and limitations of the systems.</p>
+<p>–x–</p>
+</section>
+<section id="conclusion" class="level3">
+<h3>Conclusion</h3>
+<p>So, net-net, today’s autonomous technologies do provide a benefit for drivers, occupants, pedestrians, and society at large. So, why aren’t these technologies ubiquitous then? Why aren’t there more AVs on the street?</p>
+<p>I’ll cover this part in the next post. Stay tuned.</p>
+<p><em>If you read till here, thank you, I appreciate your patience. Do drop me a <a href="https://twitter.com/AtulAcharya">tweet</a> and let me know what you liked (or not). Thank you.</em> 🙏🏻</p>
+</section>
+</section>
