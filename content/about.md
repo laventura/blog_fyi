@@ -18,7 +18,7 @@ Feel free to contact me on Twitter: @AtulAcharya
 
 One word that describes me: _Curious_. Two more: _Lifelong learner_. If you know me, I'm always on a quest to do or learn something new.
 
-My view of AI is that _artificial intelligence is an augmentation tool for humans._ As such, I am completely fascinated by **applied AI, deep learning**. I like and understand the theories; however, I am more enamored by _practical use cases of deep learning_.
+My view of AI is that _artificial intelligence is an augmentation tool for humans._ As such, I am completely fascinated by **applied AI, and deep learning**. I like and understand the theories; however, I am more enamored by _practical use cases of deep learning_.
 
 I keep a broad interest in applied AI, and here are a few interesting uses cases I track.
 
@@ -70,4 +70,4 @@ Primary areas that interest me:
 
 
 ### Disclosure
-[Needless to say, all opinions are mine, not of any employer's or organization's, past, present or future. These opinions will evolve as I learn more.]
+[All opinions are mine, not of any employer's or organization's, past, present or future. These opinions will evolve as I learn more.]
