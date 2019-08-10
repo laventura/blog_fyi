@@ -20,13 +20,13 @@ One word that describes me: _Curious_. Two more: _Lifelong learner_. If you know
 
 My view of AI is that _artificial intelligence is an augmentation tool for humans._ As such, I am completely fascinated by **applied AI, and deep learning**. I like and understand the theories; however, I am more enamored by _practical use cases of deep learning_.
 
-I keep a broad interest in applied AI, and here are a few interesting uses cases I track.
+I keep a broad interest in applied AI, and here are a few domains I track.
 
 #### Applied AI Use Cases
 
 * **Healthcare:** Medical diagnostics (radiology, skin cancer detection, diabetic retinopathy, etc.)
-* **Robotics:** Self driving cars, Autonomous robots, Flying cars
-* **AI on the Edge** Deep learning applications on smartphones, Raspberry Pi, and other limited-compute devices
+* **Robotics:** Self driving cars, Autonomous mobile robots, Flying cars
+* **AI on the Edge** Deep learning applications on smartphones, Raspberry Pi, and other edge-compute devices
 * **Aerial:** Aerial image (satellite image analytics), drone photography/analytics
 * **Creative AI:** creative arts (e.g. neural style transfer), creative music generation tools for artists and amateurs 
 * **Natural Language Understanding:** Neural machine translation, language understanding
